@@ -32,18 +32,3 @@ def sending_report_email(email_subject, email_body, plain_or_html, email_sender,
         server.sendmail(email_sender, email_receiver, email.as_string())
         print('Mail Sent')
 
-
-email_subject = 'Verizon Native Ads - Site Performance Report: {0}'.format(dt.datetime.today().strftime('%Y-%m-%d'))
-email_body = """
-                <p>Hi,&nbsp;</p>
-                <p>Please find the attached<strong> "<span style="color: #ff0000;">
-                Verizon Native Ads - Site Performance Report
-                /span>"</strong></p>
-                <p>&nbsp;</p>
-                <p><strong>Regards,</strong></p>
-                <p><strong>Ronnie Joshua</strong></p>
-            """
-plain_or_html = "html"
-email_sender = 'ronnie@ppr.media'
-email_receiver = 'ronnie@ppr.media'
-email_attachment = 'yahoo_site_report.csv'
